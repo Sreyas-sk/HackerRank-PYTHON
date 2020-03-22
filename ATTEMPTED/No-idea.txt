@@ -1,0 +1,16 @@
+import collections
+a=list(map(int,input().strip().split()))
+b=list(map(int,input().strip().split()))
+c=list(map(int,input().strip().split()))
+d=list(map(int,input().strip().split()))
+e=0
+f=collections.Counter(b)
+g=list(f.keys())
+h=list(f.values())
+for i in range (0,len(g)):
+    for j in range(0,a[1]):
+        if(g[i]==c[j]):
+            e+=h[i]
+        elif(g[i]==d[j]):
+            e-=h[i]
+print(e)                
